@@ -151,7 +151,7 @@ If you use the single quote (') you mean one character (encoded in UTF-8) ---
 which is *not* a `string` in Go.
 
 Once assigned to a variable, the string cannot be changed: strings in Go are
-immutable. If you are coming from C, not that the following is not legal in Go:
+immutable. If you are coming from C, note that the following is not legal in Go:
 
     var s string = "hello"
     s[0] = 'c'
@@ -166,7 +166,7 @@ To do this in Go you will need the following:
     fmt.Printf("%s\n", s2) //<4>
 
 Here we convert `s` to an array of runes <1>. We change the first element of
-this array <1>. Then we create a *new* string `s2` with the alteration <3>.
+this array <2>. Then we create a *new* string `s2` with the alteration <3>.
 Finally, we print the string with `fmt.Printf` <4>.
 
 
@@ -190,7 +190,7 @@ is the real part, `im` is the imaginary part and $$i$$ is the literal '$$i$$'
 Any non-trivial program will have the need for error reporting sooner or later.
 Because of this Go has a builtin type specially for errors, called `error`. `var
 e error` creates a variable `e` of type `error` with the value `nil`. This error
-type is an interface -- we'll look more at interfaces in chap:interfaces). For
+type is an interface -- we'll look more at interfaces in #interfaces). For
 now you can just assume that `error` is a type just like all other types.
 
 
